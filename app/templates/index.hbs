@@ -1,1 +1,9 @@
-{{outlet}}
+{{new-festival saveFestival='saveFestival'}}
+
+{{#each model as |festival|}}
+  <div class="festival-tile">
+  {{festival-tile model=festival}}
+  <button {{action 'deleteFestival' festival}}>Delete</button>
+  {{new-review}}
+  </div>
+{{/each}}

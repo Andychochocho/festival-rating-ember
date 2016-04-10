@@ -1,1 +1,8 @@
-{{yield}}
+<h3>Add a new festival here!</h3>
+
+<form>
+  {{input value=name id='name' placeholder='Name'}}
+  {{input value=image id='image' placeholder='Image'}}
+  {{input value=description id='description' placeholder='Description'}}
+  <button {{action 'saveFestival'}}>Add new festival</button>
+</form>

@@ -1,1 +1,6 @@
-{{yield}}
+<button {{action 'show'}}>Leave your Review</button>
+{{#if showReview}}
+<form>
+  {{input name=stars id='stars'}}
+</form>
+{{/if}}
