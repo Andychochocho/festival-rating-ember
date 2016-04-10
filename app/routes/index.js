@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  favoriteFestival: Ember.inject.service(),
   model() {
     return this.store.findAll('festival');
-    return this.store.findAll('reviews');
   },
 
   actions: {
@@ -13,6 +13,9 @@ export default Ember.Route.extend({
     },
     deleteFestival(festival) {
       festival.destroyRecord();
+    },
+    favoritesAdded(festival) {
+      this.get('favoriteFestival').add(festival);
     },
     saveRating(reviewParams) {
       var newRating = this.store.createRecord('rating', reviewParams);

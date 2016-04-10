@@ -5,6 +5,8 @@
   {{festival-tile model=festival}}
   <button {{action 'deleteFestival' festival}}>Delete</button>
   {{new-review festival=festival saveRating='saveRating'}}
-  Number of Reviews: {{festival.ratings.length}}
+  <button {{action 'favoritesAdded'}}>Add to your list of favorite Festivals!</button>
+  <br>
+  Number of Reviews: {{festival.ratings.length}}{{review-time festival}}
   </div>
 {{/each}}

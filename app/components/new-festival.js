@@ -1,6 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  favoriteFestival: Ember.inject.service(),
+  favoriteCount: Ember.computed('favoriteFestival.festivals.length', function(){
+    return this.get('favoriteFestival').festivals.length;
+  }),
+
   actions: {
     saveFestival() {
       var attributes = {

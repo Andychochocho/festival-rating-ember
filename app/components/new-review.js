@@ -15,7 +15,8 @@ export default Ember.Component.extend({
     saveRating() {
       var ratingParams = {
         festival: this.get('festival'),
-        stars: this.get('stars')
+        stars: parseInt(this.get('stars')),
+        date: Date()
       };
       this.sendAction('saveRating', ratingParams);
     }
