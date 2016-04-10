@@ -4,6 +4,7 @@
   <div class="festival-tile">
   {{festival-tile model=festival}}
   <button {{action 'deleteFestival' festival}}>Delete</button>
-  {{new-review}}
+  {{new-review festival=festival saveRating='saveRating'}}
+  Number of Reviews: {{festival.ratings.length}}
   </div>
 {{/each}}

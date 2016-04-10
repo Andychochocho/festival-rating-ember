@@ -1,0 +1,9 @@
+<h4>{{model.name}}</h4>
+<img src="{{model.image}}">
+<p>{{model.description}}</p>
+
+{{new-review festival=model saveRating='saveRating'}}
+Reviews: {{model.ratings.length}}
+{{#each model.ratings as |rating|}}
+<p>{{rating.stars}}</p>
+{{/each}}

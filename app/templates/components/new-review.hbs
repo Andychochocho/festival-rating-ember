@@ -1,6 +1,7 @@
 <button {{action 'show'}}>Leave your Review</button>
-{{#if showReview}}
+{{#if showRating}}
 <form>
-  {{input name=stars id='stars'}}
+  {{input value=stars id='stars'}}
+  <button {{action 'saveRating'}}>Save</button>
 </form>
 {{/if}}
