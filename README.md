@@ -1,7 +1,6 @@
 # Rating-system
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+*This web application built on Ember allows users to add festivals on the main page then correlate reviews to that specific festival. This is done through a one-to-many relationship that is all thrown up to firebase. There are also favorites allocated to whatever festival the user considers a favorite, and stars which the user specifies. 
 
 ## Prerequisites
 
@@ -39,10 +38,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
@@ -50,4 +45,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
