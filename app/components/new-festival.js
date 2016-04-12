@@ -6,6 +6,10 @@ export default Ember.Component.extend({
     return this.get('favoriteFestival').festivals.length;
   }),
 
+  favoriteList: Ember.computed('favoriteFestival.festivals', function() {
+    // console.log('List of favorites: ' + this.get('favoriteFestival.festivals'));
+  }),
+
   actions: {
     saveFestival() {
       var attributes = {

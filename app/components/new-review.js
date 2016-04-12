@@ -18,6 +18,7 @@ export default Ember.Component.extend({
         stars: parseInt(this.get('stars')),
         date: Date()
       };
+      // console.log(ratingParams);
       this.sendAction('saveRating', ratingParams);
     }
   }

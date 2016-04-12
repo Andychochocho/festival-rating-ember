@@ -3,8 +3,11 @@
 <p>{{model.description}}</p>
 
 {{new-review festival=model saveRating='saveRating'}}
+<br>
 Reviews: {{model.ratings.length}}
+<hr>
 {{#each model.ratings as |rating|}}
-<p>{{rating.stars}}</p>
+<p>{{star-number rating.stars}}</p>
 Date: {{rating.date}}
+<hr>
 {{/each}}
