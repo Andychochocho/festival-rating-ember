@@ -1,0 +1,10 @@
+{{#each sortedFestivals as |festival|}}
+  <div class = "festivaltile">
+    {{festival-tile model=festival}}
+    <button class="btn" {{action "deleteFestival" festival}}>Delete festival</button>
+    {{new-review festival=festival saveRating='saveRating'}}
+    
+    Reviews: {{festival.ratings.length}}{{review-time festival}}
+    <button class = "btn"{{action 'addToFavs' festival}}>Add To Favorites</button>
+  </div>
+{{/each}}

@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  ///sorting by stars
+  sortBy: ['stars.asc'],
+  sortedRatings: Ember.computed.sort('festival.ratings', 'sortBy'),
   model(festival) {
     return this.store.findRecord('festival', festival.festival_id);
   },

@@ -8,6 +8,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveFestival(attributes) {
+      console.log("test");
       var newFestival= this.store.createRecord('festival', attributes);
       newFestival.save();
     },
